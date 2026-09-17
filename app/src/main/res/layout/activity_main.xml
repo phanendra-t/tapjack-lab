@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TapjackLab — internal pentest tool"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1) Grant 'Display over other apps' permission for this app, then come back here."
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnGrantPermission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open overlay permission settings"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Overlay opacity (Android only blocks obscured touches for SYSTEM_ALERT_WINDOW overlays when opacity is >= 80%)"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvOpacityValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Opacity: 100%"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <SeekBar
+            android:id="@+id/seekOpacity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="100"
+            android:layout_marginBottom="16dp" />
+
+        <Switch
+            android:id="@+id/switchTouchable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Overlay is touchable (swallows taps instead of passing through)"
+            android:layout_marginBottom="8dp" />
+
+        <Switch
+            android:id="@+id/switchFullScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full occlusion (fullscreen). Off = partial (top half only)"
+            android:checked="true"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/btnShowOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show overlay"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnHideOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hide overlay"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2) After showing the overlay, switch to the target app (com.hdfclife.vo.uat) and tap a real button/link on a sensitive screen through the red overlay."
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3) Check logcat on your dev machine:  adb logcat -s TapjackLab:V ReactNativeJS:V"
+            android:textStyle="italic"
+            android:layout_marginBottom="8dp" />
+
+    </LinearLayout>
+</ScrollView>
