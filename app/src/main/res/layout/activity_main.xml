@@ -84,7 +84,23 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="2) After showing the overlay, switch to the target app (com.hdfclife.vo.uat) and tap a real button/link on a sensitive screen through the red overlay."
+            android:text="Decoy card text (shown inside the overlay card):"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/editDecoyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="2"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:text="Please confirm you agree to continue using this application."
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2) After showing the overlay, switch to whichever app you are testing and tap a real button/link on a sensitive screen through the overlay card."
             android:layout_marginBottom="8dp" />
 
         <TextView
